@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Cicle_Gordita';
     src: url('../fonts/Cicle_Gordita-webfont.eot');
@@ -21,6 +22,7 @@
     font-style: normal;
 
 }
+
 
 
 
@@ -106,7 +108,7 @@ table {
 	}
 	
 html, body{
-	height: 100%;
+	/* height: 100%; */
 	margin:0 auto;
 	text-align:left;
 	line-height: 1.3em;
@@ -131,7 +133,7 @@ p, a{
 header {
 	width: 100%;
 	height: 96px;
-	padding: 0 20px 0 10px;
+	padding: 0 20px 0 20px;
 	overflow: hidden;
 	position: absolute;
 	top: 0; left: 0;
@@ -145,10 +147,11 @@ header {
 }
 
 
-.header-wrap, .nav-wrap, .footer-wrap, .content-wrap{
+.header-wrap, .nav-wrap, .footer-wrap, .content-wrap, .contact-wrapper, .work-wrapper{
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
+	overflow: auto;
 }
 
 .header-left-column{
@@ -193,13 +196,13 @@ nav {
 	float: right;
 }
 
-.nav-wrap ul li{
+.nav-wrap ul li, .display-work-wrap ul li{
 	display: inline-block;
 	margin: 0;
 }
 
 
-.nav-wrap ul li a{
+.nav-wrap ul li a, .display-work-wrap ul li a{
 	text-transform: uppercase;
 	letter-spacing: .17em;
 	padding: 0 15px;
@@ -212,28 +215,29 @@ nav {
 	transition: color .2s ease-in-out;
 }
 
-.nav-wrap ul li a.current{
+.nav-wrap ul li a.current, .display-work-wrap ul li a.current{
 	color: #ff5428;
 }
 
-.nav-wrap ul li a:hover{
+.nav-wrap ul li a:hover, .display-work-wrap ul li a:hover{
 	background-color: #ff5428;
 	color: #000;
 }
 
-.nav-wrap ul li a.current:hover{
+.nav-wrap ul li a.current:hover, .display-work-wrap ul li a.current:hover{
 	color: #ff5428;
 	background-color: rgba(0,0,0,0);
 }
 
 /*MAIN BACKGROUND*/
-.main-wrapper {
+.main-wrapper, .contact-body, .work-body{
 	background-image: -ms-linear-gradient(right, #1C1C1C 0%, #5c5c5c 100%);
 	background-image: -moz-linear-gradient(right, #1C1C1C 0%, #5c5c5c 100%);
 	background-image: -o-linear-gradient(right, #1C1C1C 0%, #5c5c5c 100%);
 	background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #1C1C1C), color-stop(1, #5c5c5c));
 	background-image: -webkit-linear-gradient(right, #1C1C1C 0%, #5c5c5c 100%);
 	background-image: linear-gradient(to left, #1C1C1C 0%, #5c5c5c 100%);
+	overflow: auto;
 }
 
 /* ---------------------------------- ABOUT US --------------------------------------- */
@@ -288,13 +292,161 @@ background-image: url(../images/seismic-team.jpg);
 	width: 100%;
 }
 
+/* -------------------------------------- OUR WORK ----------------------------------- */
+
+.work-rule{
+	display: block;
+    border-style:solid;
+    border-width: thin;
+    border-color: #5b5b5b;
+    width: 100%;
+    position: absolute;
+    top: 155px;
+    left: 0;
+}
+
+.work-wrapper{
+	padding: 140px 0 100px;
+}
+
+.work-wrapper h2{
+	margin-left: 110px;
+	font-size: 18px;
+	text-shadow: 1px 2px #333333;
+	letter-spacing: .2em;
+	opacity: .9;
+}
+
+.display-work-wrap{
+	margin: 10px 0 0 120px;
+}
+
+
+
+
+
+/* --------------------------------- CONTACT US ------------------------------------ */
+
+.contact-wrapper{
+	padding: 170px 0 100px;
+}
+
+.contact-wrapper h2{
+	margin-left: 110px;
+	font-size: 18px;
+	text-shadow: 1px 2px #333333;
+	letter-spacing: .2em;
+	opacity: .9;
+}
+
+.contact-rule{
+	display: block;
+    border-style:solid;
+    border-width: thin;
+    border-color: #5b5b5b;
+    width: 100%;
+    position: absolute;
+    top: 190px;
+    left: 0;
+}
+
+.inner-contact{
+	max-width: 700px;
+	margin: 40px auto;
+}
+
+.form-container{
+	width: 50%;
+	float: left;
+	overflow: auto;
+}
+
+
+.form-input{
+	width: 100%;
+	background-color: #ccc;
+	border-radius: 0;
+	padding: 2px 8px;
+	border: none;
+	line-height: 1.8em;
+	margin-bottom: 5px;
+	font-variant: small-caps; 
+	font-family: 'Cicle_Gordita',sans-serif;
+	color: #000;
+	font-size: 12px;
+	letter-spacing: .04em;
+}
+
+input[type=submit]{
+	background-color: #ff5428;
+	border-radius: 0;
+	border: none;
+	clear: both;
+	padding: 5px 20px;
+	display: block;
+	color: #000;
+	margin: 40px 0 0;
+	cursor: pointer;
+}
+
+textarea{
+	resize: none;
+}
+
+.inline-check{
+	float: left;
+	margin: 2px 10px 0 0;
+}
+
+#word-count{
+	font-size: 9px;
+	margin-top: -10px;
+}
+
+#word-count span{
+	color: #ff5428;
+}
+
+.send-text{
+	float: left;
+	
+}
+
+.map-container{
+	background-color: #000;
+	width: 48%;
+	float: right;
+	height: 304px;
+	padding: 20px;
+	position: relative;
+}
+
+.map-container h3{
+	font-size: 18px;
+	color: #ff5428;
+}
+
+#show-map{
+	position: absolute;
+	left: 170px;
+	top: 47px;
+	background-image: url(../images/map-point.png);
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+
+
+
 /* ---------------------------------- FOOTER --------------------------------------- */
 footer {
 	position: fixed;
 	bottom: 0;
 	height: 40px;
 	width: 100%;
-	padding: 10px 20px;
+	padding: 10px 0 10px 60px;
 	z-index: 1001;
 	background-image: -ms-linear-gradient(right, rgba(13,13,13,.8) 0%, rgba(85,85,85,.8) 100%);
 	background-image: -moz-linear-gradient(right, rgba(13,13,13,.8) 0%, rgba(85,85,85,.8) 100%);
