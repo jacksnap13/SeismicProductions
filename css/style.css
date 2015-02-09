@@ -147,16 +147,9 @@ header {
 }
 
 
-.header-wrap, .nav-wrap, .footer-wrap, .content-wrap, .contact-wrapper {
+.header-wrap, .nav-wrap, .footer-wrap, .content-wrap, .contact-wrapper, .work-wrapper{
 	width: 100%;
 	max-width: 1200px;
-	margin: 0 auto;
-	overflow: auto;
-}
-
-.work-wrapper{
-	width: 100%;
-	max-width: 1000px;
 	margin: 0 auto;
 	overflow: auto;
 }
