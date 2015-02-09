@@ -362,6 +362,7 @@ background-image: url(../images/seismic-team.jpg);
 
 .work-wrapper{
 	padding: 140px 0 100px;
+	max-width: 1000px;
 }
 
 .work-wrapper h2{
