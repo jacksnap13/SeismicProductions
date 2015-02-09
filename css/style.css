@@ -160,8 +160,14 @@ header {
 
 .header-right-column{
 	float: right;
-	max-width: 320px;
+	width: 300px;
 	height: 96px;
+}
+
+.search-box{
+	float: left;
+	width: 180px;
+	margin-top: 20px;
 }
 
 .contact-box{
@@ -169,6 +175,54 @@ header {
 	margin: 20px 0 0 5px;
 	width: 90px;
 	text-align: right;
+}
+
+
+/* ---------------------------------- SEARCH MENU --------------------------------------- */
+
+.vc_google-search{
+	position: absolute;
+	z-index: -2;
+	visibility: hidden;
+}
+
+.vc_menu-search-wrapper{
+	/* width: 180px; */
+	float: right;
+	height: 25px;
+	overflow: hidden;
+	background: #1d1d1d;
+	border-right: 1px dashed #fff;
+}
+
+.vc_menu-search{
+	/* width: 180px; */
+	height: 25px;
+	float: right;
+}
+
+.vc_menu-search-text{
+	float: left;
+	/* width: 155px; */
+	height: 25px;
+	border: none;
+	background: #1d1d1d;
+	color: #fff;
+	padding: 2px;
+	margin: 0;
+	outline: none;
+	font-size: 12px;
+	line-height: 18px;
+	width: 0;
+}
+
+.vc_menu-search-submit{
+	float: left;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	text-align: center;
+	background: url('../images/menu-search-magnifier.png') center center no-repeat;
 }
 
 
