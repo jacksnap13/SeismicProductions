@@ -100,9 +100,10 @@
 }
 
 /*LARGE IMAGE---------------------------------------------------------*/
+/* Tony edit 3/10/15 original width 587 original height 357 */
 .viewLG {
    width: 585px;
-   height: 357px;
+   height: 354px;
    margin: 0px;
    float: left;
    border: 0px;
