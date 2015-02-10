@@ -1,8 +1,10 @@
 
+/* Tony edit 3/10/15 changed margin top from 0 to 4px */
 .view {
    width: 285px;
    height: 176px;
-   margin: 0px;
+   /*margin: 0px;*/
+   margin-top: 4px;
    float: left;
    border: 0px solid #fff;
    overflow: hidden;
@@ -101,10 +103,12 @@
 
 /*LARGE IMAGE---------------------------------------------------------*/
 /* Tony edit 3/10/15 original width 587 original height 357 */
+/* Tony edit 3/10/15 changed margin top from 0 to 4px */
 .viewLG {
    width: 585px;
    height: 352px;
-   margin: 0px;
+   /*margin: 0px;*/
+   margin-top: 4px;
    float: left;
    border: 0px;
    overflow: hidden;
