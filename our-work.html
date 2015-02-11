@@ -23,6 +23,32 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="img/ico/favicon.ico">
+	
+	<!-- ISOTOPE REFERENCES -->
+     <link rel="stylesheet" type="text/css" href="css/ourworks/css/style_common.css" />
+     <link rel="stylesheet" type="text/css" href="css/ourworks/css/style1.css" />
+     <link rel="stylesheet" href="isotope-site/css/style.css" />
+     <link rel="stylesheet" href="plugins/isotope-plugin/css/isotope.css" />
+	 
+	<!-- FANCYBOX CODE CALL-INS ======================================================================-->
+	 
+	 <!-- Add jQuery library -->
+      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+     <!-- Add mousewheel plugin (this is optional) -->
+      <script type="text/javascript" src="plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+     <!-- Add fancyBox -->
+      <link rel="stylesheet" href="plugins/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+      <script type="text/javascript" src="plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+     <!-- Optionally add helpers - button, thumbnail and/or media -->
+      <link rel="stylesheet" href="plugins/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+      <script type="text/javascript" src="plugins/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+      <script type="text/javascript" src="plugins/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+      <link rel="stylesheet" href="plugins/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+      <script type="text/javascript" src="plugins/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
     
     
     <!-- CSS -->
@@ -75,6 +101,8 @@
     <!-- Custom CSS -->
     <!-- <link href="custom/custom.css" rel="stylesheet" type="text/css"> -->
     <link href="css/style.css" rel="stylesheet" type="text/css">
+	
+	
 
 
     <!-- Head SCRIPTS -->
@@ -90,7 +118,6 @@
 <body data-smooth-scrolling="1" class="contact-body"> 
 
 <header>
-
 	<div class="header-wrap">
 		<div class="header-left-column">
 			<img src="images/seismic-logo.png" alt="seismic logo"/>
@@ -119,12 +146,27 @@
 <hr class="work-rule"/>
 <div class="work-wrapper">
 <h2>OUR WORK</h2>
-
-<!-- ISOTOPE REFERENCES -->
-<link rel="stylesheet" type="text/css" href="css/ourworks/css/style_common.css" />
-<link rel="stylesheet" type="text/css" href="css/ourworks/css/style1.css" />
-<link rel="stylesheet" href="isotope-site/css/style.css" />
-<link rel="stylesheet" href="plugins/isotope-plugin/css/isotope.css" />
+<!-- BUILD FANCYBOX ------------------------------------>
+   
+<!-- <script type="text/javascript">
+var J = jQuery.noConflict();
+J(document).ready(function() {
+    J(".fancybox").fancybox({
+	    type: 'iframe',
+        maxWidth    : 900,
+        maxHeight    : 700,
+        fitToView    : true,
+        width        : '80%',
+        height        : '80%',
+        autoSize    : true,
+        closeClick    : false,
+        openEffect    : 'elastic',
+        closeEffect    : 'elastic'
+    });
+    
+});
+</script> -->
+                                              
 
 <!-- PAGE TITLE -->
 <!-- <div class="feature-title">
@@ -152,6 +194,9 @@
 
     </section>
   </section>
+  
+
+  
 <!-- END ISOTOPE REFERENCES -->   
 
 <!-- <div class="display-work-wrap">
@@ -165,54 +210,18 @@
 	</div> -->
 
 </div>
-
+    
 
 <!-- OUR WORKS PAGE -------------------------------------------------------------------------------------------------------------------------------------------------->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<!-- FANCYBOX CODE CALL-INS ======================================================================-->
-
-<!-- Add mousewheel plugin (this is optional) -->
-<script type="text/javascript" src="plugins/plg_fancybox/js/jquery.mousewheel-3.0.6.pack.js"></script>
-
-<link rel="stylesheet" href="templates/rt_kirigami/css/gantry-core.css" type="text/css" />
-
-
-<!-- Add fancyBox -->
-<link rel="stylesheet" href="plugins/plg_fancybox/css/jquery.fancybox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="plugins/plg_fancybox/js/jquery.fancybox.pack.js"></script>
-
-<!-- Optionally add helpers - button, thumbnail and/or media -->
-<link rel="stylesheet" href="plugins/plg_fancybox/css/jquery.fancybox-buttons.css" type="text/css" media="screen" />
-<script type="text/javascript" src="plugins/plg_fancybox/js/jquery.fancybox-buttons.js"></script>
-<script type="text/javascript" src="plugins/plg_fancybox/js/jquery.fancybox-media.js"></script>
-
-<link rel="stylesheet" href="plugins/plg_fancybox/css/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
-<script type="text/javascript" src="plugins/plg_fancybox/js/jquery.fancybox-thumbs.js"></script>
 
 <!-- lessens menu bar height ( maybe has other effects?)-->
 <style>
 .menu-block{padding: 0px;}    
 </style>
 
-<!-- Create Fancybox --> 
-<script type="text/javascript">
-var J = jQuery.noConflict();
-J(document).ready(function() {
-    J(".various").fancybox({
-        maxWidth    : 900,
-        maxHeight    : 700,
-        fitToView    : true,
-        width        : '80%',
-        height        : '80%',
-        autoSize    : true,
-        closeClick    : false,
-        openEffect    : 'elastic',
-        closeEffect    : 'elastic'
-    });
-    
-});
-</script> 
+
 
 <!-- END FANCYBOX CODE -->
 
@@ -220,7 +229,7 @@ J(document).ready(function() {
 
 
 
-
+                                                                                   
 
 <!-- START NICESCROLL REFERENCES --> 
 <style type="text/css">
@@ -239,6 +248,9 @@ J(document).ready(function() {
 </style>
 
 <script src="plugins/jquery.nicescroll.3/jquery.nicescroll.js"></script>
+
+
+
 <script>
 var jq = jQuery.noConflict();
   jq(document).ready(function() {
@@ -249,7 +261,7 @@ var jq = jQuery.noConflict();
 </script>
 
 <meta name="viewport" content="user-scalable=no" />
-
+ 
 <script>
 var jr = jQuery.noConflict();
 jr(function(){var nice=jr(":nicescroll").getNiceScroll(0);jr("#div1").html(jr("#div1").html()+' '+nice.version+' (jr:'+jr().jquery+')')})
@@ -271,6 +283,7 @@ js("#boxscroll2").scrollTop(0);
 <!-- CONTENT ==================================================================================-->
 <div id="boxscroll2" style="display:none2">
   <div id="container" class="super-list variable-sizes clearfix" >
+  
 
     <!-- ARCHIVE -->
     
@@ -285,8 +298,18 @@ js("#boxscroll2").scrollTop(0);
     </div>
     </div>
     </div> -->
+	
+	<div class="view view-first size small archive">  
+    <img src="images/productions/screens/thumbs/abraham-lincoln-vampire-hunter-screen-thumb.jpg" alt="Abraham Lincoln Vampire Hunter"/>
+    <div class="mask">
+    <h2 class="name">Abraham Lincoln Vampire Hunter</h2>
+    <p style="margin-bottom:0;">TV Spot</p>
+    <div class="preview"><a class="info various fancy fancybox" href="sniper.html" 
+     data-fancybox-type="iframe" onclick="cbBlank()"><img src="images/play-sm.png"></a></div>
+    </div>
+    </div> 
     
-    <div class="view view-first size small archive">  
+<!--     <div class="view view-first size small archive">  
     <img src="images/productions/screens/thumbs/abraham-lincoln-vampire-hunter-screen-thumb.jpg" alt="Abraham Lincoln Vampire Hunter"/>
     <div class="mask">
     <h2 class="name">Abraham Lincoln Vampire Hunter</h2>
@@ -294,7 +317,7 @@ js("#boxscroll2").scrollTop(0);
     <div class="preview"><a class="info various fancy fancybox" href="index.php?option=com_k2&amp;view=item&amp;id=291?tmpl=component" 
      data-fancybox-type="iframe" onclick="cbBlank()"><img src="images/play-sm.png"></a></div>
     </div>
-    </div>
+    </div>  -->
 
     <div class="view view-first size small archive">  
     <img src="images/productions/screens/thumbs/blades-of-glory-screen-thumb.jpg" alt="Blades of Glory-thumb"/>
@@ -1231,7 +1254,7 @@ js("#boxscroll2").scrollTop(0);
       </div>
     </div>
     
-   <div class="viewLG view-first size large theatrical">  
+<!--    <div class="viewLG view-first size large theatrical">  
       <img src="images/productions/screens/thumbs-lg/american-sniper-thumb-lg.jpg" alt="21 Jump Street-thumb"/>
       <div class="mask">
           <h2 class="name">15011960 American Sniper</h2>
@@ -1242,6 +1265,24 @@ js("#boxscroll2").scrollTop(0);
         </div>
       </div>
     </div>
+	 -->
+	 <div>
+	 <a class="fancybox"  href="sniper.html">Iframe</a>
+	 </div>
+	 
+	 
+	   <div class="viewLG view-first size large theatrical">  
+      <img src="images/productions/screens/thumbs-lg/american-sniper-thumb-lg.jpg" alt="American Sniper"/>
+      <div class="mask">
+          <h2 class="name">15011960 American Sniper</h2>
+          <p style="margin-bottom:0;">TV Spots</p>
+          <div class="preview"><a class="info various fancy fancybox" href="sniper.txt" 
+          onclick="cbAmericanSniper()">
+          <img src="images/play-sm.png"></a>
+        </div>
+      </div>
+    </div>
+	
 
     <div class="view view-first size small theatrical">  
     <img src="images/productions/screens/thumbs/about-last-night-screen-thumb.jpg" alt="About Last Night Thumb"/>
@@ -2107,7 +2148,10 @@ js("#boxscroll2").scrollTop(0);
 
 
   </div>
+
+  
   <div><br><br><br><br><br><br><br><br></div>
+
 </div>
 
 
@@ -2115,6 +2159,7 @@ js("#boxscroll2").scrollTop(0);
 
 
 <!-- END CONTENT ===============================================================================-->
+<!-- Create Fancybox --> 
 
 
 
