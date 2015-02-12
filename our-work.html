@@ -181,7 +181,7 @@ J(document).ready(function() {
       <div class="option-combo left nav">
         <ul id="filter" class="option-set clearfix" data-option-key="filter">
         <!-- <li><a href="#show-all" data-option-value="*:not(.example)" class="selected">show all</a></li>-->
-        <li class="current"><a href="#theatrical" data-option-value=".theatrical"class="selected" onclick="scrolltotop();alphasort()">theatrical</a></li>
+        <li class="current"><a href="#theatrical" data-option-value=".theatrical"class="selected" onclick="scrolltotop();alphasortT()">theatrical</a></li>
         <li><a href="#digital" data-option-value=".digital" onclick="scrolltotop();alphasort()">digital</a></li>
         <li><a href="#home-entertainment" data-option-value=".home-entertainment" onclick="scrolltotop();alphasortHE()">home-entertainment</a></li>
         <li><a href="#broadcast" data-option-value=".broadcast" onclick="scrolltotop();alphasort()">broadcast</a></li>
@@ -2927,7 +2927,7 @@ helpers:{
 <!--End Random order function----------------------------------------------------------------------> 
 <!--Theatrical order function---------------------------------------------------------------------->
 <script>
-  function alphasort(){
+  function alphasortT(){
    $ (function(){
     
       var $container = $('#container');
