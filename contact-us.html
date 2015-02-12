@@ -78,6 +78,7 @@
 
 
     <!-- Head SCRIPTS -->
+    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/modernizr.js"></script> 
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -112,21 +113,28 @@
 						s.parentNode.insertBefore(gcse, s);
 					  })();
 					</script>
-					<gcse:searchbox-only as_sitesearch="www.homedepot.rightforleft.com" enableAutoComplete="true" autoCompleteMaxCompletions="5" autoCompleteMatchType='any'></gcse:searchbox-only>
-					<div class="gcse-searchbox-only" data-resultsUrl="pages-search-result.html" data-queryParameterName="q" ></div>			
+					<gcse:searchbox-only as_sitesearch="www.paulclarkphoto.com" enableAutoComplete="true" autoCompleteMaxCompletions="5" autoCompleteMatchType='any'></gcse:searchbox-only>
+					<div class="gcse-searchbox-only" data-resultsUrl="results.html" data-queryParameterName="q" ></div>			
 				</div> 
 				
 				<div class="vc_menu-search-wrapper pull-right">
 			
 				  <form class="vc_menu-search">
 				  <div class="vc_menu-search-submit"> </div>
-					<input type="text" name="search" class="vc_menu-search-text" required placeholder="Search">
+					<input type="text" name="search" class="vc_menu-search-text" required placeholder="">
 					
 				  </form>
 				</div>
 				<!-- In menu search form ends --> 
           
-
+				<script>
+					$(function(){
+						$(".vc_menu-search").on("click", function(){
+							$(this).animate({"width":"180px"});
+							$(".vc_menu-search-text").animate({"width":"155px"});
+						});
+					});
+				</script>
 			</div><!-- End search box -->
 			
 			<div class="contact-box">
