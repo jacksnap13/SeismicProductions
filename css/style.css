@@ -363,7 +363,7 @@ background-image: url(../images/seismic-team.jpg);
 /* Tony edit 3/13/15 defined max-width on our works page to center content */
 .work-wrapper{
 	padding: 140px 0 100px;
-	max-width: 890px;
+	max-width: 1000px;
 }
 
 .work-wrapper h2{
