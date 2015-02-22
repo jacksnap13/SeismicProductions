@@ -1288,7 +1288,8 @@ padding: 0px;
 .caption.slidelink a div,
 .tp-caption.slidelink a div {	width:3000px; height:1500px;  background:url(../assets/coloredbg.png) repeat;}
 
-.tp-loader 	{	background:url(../assets/loader-seismic.gif) no-repeat 0px 0px; 
+/* Tony edit 2/22/15 commented out loader; interferes with display and may no longer be necessary */
+/*.tp-loader 	{	background:url(../assets/loader-seismic.gif) no-repeat 0px 0px; 
 				background-color:transparent;  
 				margin:-80px -80px; 
 				top:50%; 
@@ -1302,7 +1303,7 @@ padding: 0px;
 				-webkit-border-radius: 3px;
 			}
 
-
+*/
 .tp-transparentimg {	content:"url(../assets/transparent.png)"}
 .tp-3d				{	-webkit-transform-style: preserve-3d;
 						 -webkit-transform-origin: 50% 50%;
