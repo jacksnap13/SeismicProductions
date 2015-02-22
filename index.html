@@ -6,10 +6,28 @@
 <!-- Data to be passed to templates/headers/header-x.tpl.html -->
 <!-- End of Data -->
 
+
 <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="plugins/RevolutionSlider/rs-plugin/css/settings.css">
+    <!-- <link rel="stylesheet" href="plugins/RevolutionSlider/css/style.css"> -->
+	<!-- <link rel="stylesheet" href="plugins/RevolutionSlider/css/navstylechange.css"> -->
+	<!-- <link rel="stylesheet" href="plugins/RevolutionSlider/css/style.css"> -->
+	
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <link rel="stylesheet" href="plugins/fancybox/source/jquery.fancybox.css" type="text/css" media="screen">
+    <script type="text/javascript" src="plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="plugins/fancybox/source/jquery.fancybox.js"></script>
+	<link rel="stylesheet" href="css/xrt_kirigami-custom.css"  type="text/css">
+    <link rel="stylesheet" href="css/xxtemplate.css"  type="text/css">
+
+
+
+
+    <meta charset="utf-8">
     <title>Seismic Productions</title>
-    <meta name="keywords" content="Seismic Productions" />
+    <meta name="keywords" content="Seismic Productions">
     <meta name="description" content="Seismic Productions">
     <meta name="author" content="Right for Left Studios">
     
@@ -24,6 +42,26 @@
     <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="img/ico/favicon.ico">
     
+	<!-- FANCYBOX CODE CALL-INS ======================================================================-->
+	 	 <!-- Add jQuery library -->
+      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+     <!-- Add mousewheel plugin (this is optional) -->
+      <script type="text/javascript" src="plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+     <!-- Add fancyBox -->
+      <link rel="stylesheet" href="plugins/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+      <script type="text/javascript" src="plugins/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+     <!-- Optionally add helpers - button, thumbnail and/or media -->
+      <link rel="stylesheet" href="plugins/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+      <script type="text/javascript" src="plugins/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+      <script type="text/javascript" src="plugins/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+      <link rel="stylesheet" href="plugins/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+      <script type="text/javascript" src="plugins/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>	
+	<!-- END FANCYBOX CALL-INS ====================================================================================-->
+	
     
     <!-- CSS -->
        
@@ -85,9 +123,23 @@
       <script type="text/javascript" src="js/html5shiv.js"></script>
       <script type="text/javascript" src="js/respond.min.js"></script>
     <![endif]-->
+
+<!-- Tony edit 2/17/15 changed z-index from -999 -found in xrt-kirigami.css -->	
+<style>
+#full{
+	  display:block;
+	  position: fixed;
+	 z-index:5;
+	  width: 100%;
+	  top: 0;
+	  left: 0;
+}
+</style>
+
     
 </head>    
-<body data-smooth-scrolling="1"> 
+<body data-smooth-scrolling="1" class="contact-body"> 
+
 
 <header>
 	<div class="header-wrap">
@@ -98,15 +150,15 @@
 			<div class="search-box"></div>
 			<div class="contact-box">
 				<p>T 323.957.3350</p>
-				<a href="https://www.facebook.com/SeismicProductions?fref=ts"><img src="images/facebook.png" alt="facebook logo"/></a>
-				<a href="https://twitter.com/seismicpro"><img src="images/twitter.png" alt="twitter logo"/></a>
+				<a href=""><img src="images/facebook.png" alt="facebook logo"/></a>
+				<a href=""><img src="images/twitter.png" alt="twitter logo"/></a>
 			</div>
 		</div>
 	</div>
 </header>  
 
 <nav class="clearfix">
-	<div class="nav-wrap">
+<div class="nav-wrap">
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="our-work.html">Our Work</a></li>
@@ -116,11 +168,388 @@
 	</div>
 </nav>  
 
-<div class="main-wrapper">
-<p>Content</p>
+<div id="full">
+<!-- REVOLUTION SLIDER -->
+  <div class="tp-banner-container" >
+    <div class="tp-banner">
+      <ul>
+        
+         <!--American Sniper-->
+        <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/american-sniper-feature.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbASniper()" data-fancybox-type="iframe" href="videos/sniper.html" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+		  </div> 
+		</li>
+        
+        <!--Get Hard-->
+        <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/get-hard-feature1.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbGetHard()" data-fancybox-type="iframe" href="index.php?option=com_k2&amp;view=item&amp;id=303?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li> 
+
+        <!--Cinderella-->
+        <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/cinderella-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbCinderella()" data-fancybox-type="iframe" href="index.php?option=com_k2&amp;view=item&amp;id=283?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li>
+
+        <!--The Interview-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/the-interview-feature.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbTheInterview()" data-fancybox-type="iframe" href="index.php?option=com_k2&amp;view=item&amp;id=306?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li> -->
+
+        <!--No Good Deed-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/no-good-deed-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbNGD()" data-fancybox-type="iframe" href="index.php/component/k2/item/261?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li> -->
+        
+        <!--Paul Blart Mall Cop 2 --> 
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/paul-blart-2-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbPBMC()" data-fancybox-type="iframe" href="index.php?option=com_k2&amp;view=item&amp;id=286?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li> -->
+
+        <!--The Wedding Ringer-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/wedding-ringer-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbWR()" data-fancybox-type="iframe" href="index.php/component/k2/item/263?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li>   -->
+
+         <!--Annie-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/annie-title-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbANNIE()" data-fancybox-type="iframe" href="index.php/component/k2/item/256?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li> -->
+
+         <!--Top Five-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/top-five-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbTopFive()" data-fancybox-type="iframe" href="index.php?option=com_k2&amp;view=item&amp;id=301?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li>  -->
+
+         <!--Danny Collins-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/danny-collins-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbDanny()" data-fancybox-type="iframe" href="index.php?option=com_k2&amp;view=item&amp;id=284?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li> 
+ -->
+         <!-- A La Mala --> 
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/a-la-mala-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbALaMala()" data-fancybox-type="iframe" href="index.php?option=com_k2&amp;view=item&amp;id=309?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li>
+ -->
+         <!--Little Boy-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/little-boy-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbLB()" data-fancybox-type="iframe" href="index.php?option=com_k2&amp;view=item&amp;id=302?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li>  -->
+ 
+       <!--22 Jump Street-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/22-jump-street-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cb22()" data-fancybox-type="iframe" href="index.php?option=com_k2&amp;view=item&amp;id=257?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li> -->
+
+         <!--The Other Woman-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/other-woman-feature.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbOW()" data-fancybox-type="iframe" href="index.php/component/k2/item/235?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li> -->
+
+         <!--Heaven Is For Real-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/heaven-is-for-real-feature.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbHIFR()" data-fancybox-type="iframe" href="index.php/component/k2/item/230?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li>
+         -->
+         <!--Chef-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/chef-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbChefA()" data-fancybox-type="iframe" href="index.php/component/k2/item/258?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li>         
+ -->
+         <!--Jersey Boys-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/jersey-boys-bg.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="cbJerseyA()" data-fancybox-type="iframe" href="index.php/component/k2/item/259?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li>        
+ -->
+         <!--Ride Along-->
+<!--         <li data-transition="boxslide" data-slotamount="9" data-masterspeed="500" data-slideindex="back">
+          <img src="images/productions/featured/ride-along-feature.jpg" data-bgfit="cover" data-bgposition="center top" data-bgrepeat="no-repeat">
+          <div style="width:50%">
+            <a class="box-link various fancy fancybox" onclick="changebgRA()" data-fancybox-type="iframe" href="index.php/component/k2/item/206?tmpl=component" webkitAllowFullScreen mozallowfullscreen allowFullScreen><img style="opacity:0;" onmouseover="showImg(this)" onmouseout="hideImg(this)" src="images/play-button-frontpage.png"></a>
+          </div>          
+        </li> -->
+   
+      </ul>
+      
+      <div class="tp-bannertimer"></div>
+      
+    </div>
 </div>
 
-	
+
+
+
+<!--Tony edit- function to show-hide play button-->
+<script type="text/javascript">
+function showImg(x)
+{
+x.style.opacity="0.6";
+}
+
+function hideImg(x)
+{
+x.style.opacity="0";
+}
+</script>
+
+
+<!-- Change Fancybox BGs *****************************************************************************************-->
+<script>
+
+function cbGetHard() {
+  jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('http://www.seismicproductions.com/site/images/productions/featured/get-hard-feature1.jpg')"}
+    }
+},});
+  }
+
+function cbCinderella() {
+  jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('http://www.seismicproductions.com/site/images/productions/featured/cinderella-bg.jpg')"}
+    }
+},});
+  }
+
+function cbASniper() {
+  jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('http://www.seismicproductions.com/site/images/productions/featured/american-sniper-feature.jpg')"}
+    }
+},});
+  }
+
+function cbTheInterview() {
+  jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('http://www.seismicproductions.com/site/images/productions/featured/the-interview-feature.jpg')"}
+    }
+},});
+  }
+
+function cbNGD()
+{
+jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('images/productions/featured/no-good-deed-bg.jpg')"}
+    }
+},});    
+}
+
+function cbWR()
+{
+jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('images/productions/featured/wedding-ringer-bg.jpg')"}
+    }
+},});    
+}
+
+function cbPBMC() {
+  jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('http://www.seismicproductions.com/site/images/productions/featured/paul-blart-mall-cop-2-bg.jpg')"}
+    }
+},});
+  }
+
+function cbANNIE()
+{
+jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('images/productions/featured/annie-title-bg.jpg')"}
+    }
+},});    
+}
+
+function cbTopFive() {
+  jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('http://www.seismicproductions.com/site/images/productions/featured/top-five-bg.jpg')"}
+    }
+},});
+  }
+
+function cbDanny() {
+  jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('http://www.seismicproductions.com/site/images/productions/featured/danny-collins-bg.jpg')"}
+    }
+},});
+  }
+
+function cbALaMala() {
+  jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('http://www.seismicproductions.com/site/images/productions/featured/a-la-mala-bg.jpg')"}
+    }
+},});
+  }
+  
+function cbLB() {
+  jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('http://www.seismicproductions.com/site/images/productions/featured/little-boy-bg.jpg')"}
+    }
+},});
+  }
+
+function cb22()
+{
+jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('images/productions/featured/22-jump-street-bg.jpg')"}
+    }
+},});    
+}
+
+function cbOW()
+{
+jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('images/productions/featured/other-woman-feature.jpg')"}
+    }
+},});    
+}
+
+function cbHIFR()
+{
+jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('images/productions/featured/heaven-is-for-real-feature.jpg')"}
+    }
+},});    
+}
+
+function cbChefA()
+{
+jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('images/productions/featured/chef-bg.jpg')"}
+    }
+},});    
+}
+
+function cbJerseyA()
+{
+jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('images/productions/featured/jersey-boys-bg.jpg')"}
+    }
+},});    
+}
+
+function changebgRA()
+{
+jQuery(".fancybox").fancybox({
+helpers:{
+    overlay:{
+        css:{'background':"url('images/productions/featured/ride-along-feature.jpg')"}
+    }
+},});    
+}
+
+</script>
+
+<!--End Tony edit-->
+<script src="plugins/RevolutionSlider/vendor/jquery-1.10.1.min.js"></script>
+<script src="plugins/RevolutionSlider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="plugins/RevolutionSlider/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+
+<script type="text/javascript">
+
+        var revapi;
+
+        jQuery(document).ready(function() {
+
+             revapi = jQuery('.tp-banner').revolution(
+            {
+              delay:15000,
+              startwidth:1170,
+              startheight:500,
+              hideThumbs:10,
+              fullWidth:"off",
+              fullScreen:"on",
+              fullScreenOffsetContainer: "",
+              forceFullWidth:"on",
+              navigationHAlign:"right",
+              navigationHOffset:200
+            });
+
+        });  //ready
+
+</script>
+
+<!-- END REVOLUTION SLIDER -->
+    
+</div>
 <footer>
 	<div class="footer-wrap">
 		<p>&copy; 2015 SEISMIC PRODUCTIONS ALL RIGHTS RESERVED</p>
