@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
-<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->	<html><!--<![endif]-->
-
+<!--[if IE 8]>      <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>      <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
 <!-- Data to be passed to templates/headers/header-x.tpl.html -->
 <!-- End of Data -->
+<!-- Tony Edit 2/4/15 -->
 
 <head>
     <meta charset="utf-8" />
@@ -12,175 +14,255 @@
     <meta name="keywords" content="Seismic Productions" />
     <meta name="description" content="Seismic Productions">
     <meta name="author" content="Right for Left Studios">
-    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="img/ico/favicon.ico">
+
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/grid-12-responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/micro.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/chrome" href="css/chrome.css"> <!-- chrome only css -->
+    <link rel="stylesheet" href="plugins/contact-form/assets/styles/select2.css">
+	<link rel="stylesheet" href="plugins/contact-form/assets/styles/contact.css">
+
+    <!-- jQuery Script -->
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    <script src="plugins/contact-form/assets/js/select2.min.js"></script>
+	<script src="plugins/contact-form/assets/js/contact.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
-    
-    <!-- CSS -->
-       
-    <!-- Bootstrap & FontAwesome CSS -->
-    <!--
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
--->
-    <!--[if IE 7]><link type="text/css" rel="stylesheet" href="css/font-awesome-ie7.min.css"><![endif]-->
+    <!-- Isotope Scripts -->
+    <script>
+    var jq = jQuery.noConflict();
+    jq(document).ready(function() {
+        //    jq("html").niceScroll();  // The document page (html)
 
-    <!-- Fonts CSS -->
-    <!-- <link href="css/fonts.css"  rel="stylesheet" type="text/css"> -->
-               
-    <!-- Plugin CSS -->
-   <!--
- <link href="plugins/prettyPhoto-plugin/css/prettyPhoto.css" rel="stylesheet" type="text/css">
-    <link href="plugins/isotope-plugin/css/isotope.css" rel="stylesheet" type="text/css">
-    <link href="plugins/rs-plugin/css/settings.css" media="screen" rel="stylesheet" type="text/css">
-	<link href="plugins/google-code-prettify/prettify.css" rel="stylesheet" type="text/css">  
-	<link href="css/animate.min.css" rel="stylesheet" type="text/css">
---> 
- 
-    <!-- Theme CSS -->
-    <!-- <link href="css/theme.css" rel="stylesheet" type="text/css"> -->
-    <!--[if IE]> <link href="css/ie.css" rel="stylesheet" > <![endif]-->
-    <!-- <link href="css/chrome.css" rel="stylesheet" type="text/chrome"> --> <!-- chrome only css -->
-    <!-- <link href="css/header/header-4.css" rel="stylesheet"> -->
+        jq("#boxscroll2").niceScroll({
+            touchbehavior: false,
+            cursorcolor: "#FF582A",
+            cursorborder: "#FF582A",
+            cursorborderradius: "0px",
+            cursoropacitymax: 0.7,
+            cursorwidth: 16,
+            background: "#202020",
+            autohidemode: true
+        });
+    });
 
-	<!-- Specific Page CSS -->
-	
-    <!-- Design Mode CSS -->
-    <!--
-<link id="link-header-mode" href="css/mode/mode-1-header.css" rel="stylesheet" type="text/css"> 
-    <link id="link-footer-mode" href="css/mode/mode-2-footer.css" rel="stylesheet" type="text/css">    
-    <link id="link-color" href="css/color/color-orange.css" rel="stylesheet" type="text/css">
--->
+    jq(function() {
+        var nice = jq(":nicescroll").getNiceScroll(0);
+        jq("#div1").html(jq("#div1").html() + ' ' + nice.version + ' (jq:' + jq().jquery + ')')
+    })
 
+    function scrolltotop() {
+        jq("#boxscroll2").scrollTop(0);
+    };
+    </script>
+
+    <!-- Create Fancybox -->
+    <script type="text/javascript">
+    var J = jQuery.noConflict();
+    J(document).ready(function() {
+        J(".various").fancybox({
+            maxWidth    : 900,
+            maxHeight    : 700,
+            fitToView    : true,
+            width        : '80%',
+            height        : '80%',
+            autoSize    : true,
+            closeClick    : false,
+            openEffect    : 'elastic',
+            closeEffect    : 'elastic'
+        });
         
-    <!-- Responsive CSS -->
-    <!--
-<link href="css/theme-responsive.css" rel="stylesheet" type="text/css"> 
-    <link href="css/header/header-2-responsive.css" rel="stylesheet" type="text/css"> 
-    <link id="link-header-mode-r" href="css/mode/mode-1-header-responsive.css" rel="stylesheet" type="text/css"> 
-    <link id="link-footer-mode-r" href="css/mode/mode-2-footer-responsive.css" rel="stylesheet" type="text/css">
-    <link id="link-color" href="css/color/color-orange-responsive.css" rel="stylesheet" type="text/css">        
-		              
--->
-    
-    <!-- Custom CSS -->
-    <!-- <link href="custom/custom.css" rel="stylesheet" type="text/css"> -->
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    });
+    </script>
 
-
-    <!-- Head SCRIPTS -->
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/modernizr.js"></script> 
-    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script type="text/javascript" src="js/html5shiv.js"></script>
       <script type="text/javascript" src="js/respond.min.js"></script>
     <![endif]-->
-    
-</head>    
-<body data-smooth-scrolling="1" class="contact-body"> 
+</head>
 
-<header>
-	<div class="header-wrap">
-		<div class="header-left-column">
-			<img src="images/seismic-logo.png" alt="seismic logo"/>
-		</div>
-		<div class="header-right-column">
-			<div class="search-box">
-				
-				
-				<!--Google Search Function-->
-				<div class="vc_google-search">
-					<script>
-					  (function() {
-					    var cx = '010996132893637450599:cjhcnqxcjf4';
-					    var gcse = document.createElement('script');
-					    gcse.type = 'text/javascript';
-					    gcse.async = true;
-					    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-					        '//www.google.com/cse/cse.js?cx=' + cx;
-					    var s = document.getElementsByTagName('script')[0];
-					    s.parentNode.insertBefore(gcse, s);
-					  })();
-					</script>
-					<gcse:search></gcse:search>
-					<div class="gcse-searchbox-only" data-resultsUrl="results.html" data-queryParameterName="q" ></div>			
-				</div> 
-				
-				<div class="vc_menu-search-wrapper pull-right">
-			
-				  <form class="vc_menu-search">
-				  <div class="vc_menu-search-submit"> </div>
-					<input type="text" name="search" class="vc_menu-search-text" required placeholder="">
+<body data-smooth-scrolling="1" class="contact-body">
+<!-- HEADER -->
+	<header>
+		<div class="header-wrap">
+			<div class="header-left-column">
+				<img src="images/seismic-logo.png" alt="seismic logo"/>
+			</div>
+			<div class="header-right-column">
+				<div class="search-box">
+					<!--Google Search Function-->
+					<div class="vc_google-search">
+						<script>
+						  (function() {
+						    var cx = '010996132893637450599:cjhcnqxcjf4';
+						    var gcse = document.createElement('script');
+						    gcse.type = 'text/javascript';
+						    gcse.async = true;
+						    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+						        '//www.google.com/cse/cse.js?cx=' + cx;
+						    var s = document.getElementsByTagName('script')[0];
+						    s.parentNode.insertBefore(gcse, s);
+						  })();
+						</script>
+						<gcse:search></gcse:search>
+						<div class="gcse-searchbox-only" data-resultsUrl="results.html" data-queryParameterName="q" ></div>			
+					</div> 
 					
-				  </form>
-				</div>
-				<!-- In menu search form ends --> 
-          
-				<script>
-					$(function(){
-						$(".vc_menu-search").on("click", function(){
-							$(this).animate({"width":"180px"});
-							$(".vc_menu-search-text").animate({"width":"155px"});
+					<div class="vc_menu-search-wrapper pull-right">
+					  	<form class="vc_menu-search">
+					  	<div class="vc_menu-search-submit"> </div>
+						<input type="text" name="search" class="vc_menu-search-text" required placeholder="">
+					  </form>
+					</div>
+					<!-- In menu search form ends --> 
+	          
+					<script>
+						$(function(){
+							$(".vc_menu-search").on("click", function(){
+								if ($(this).width(35)) {
+									$(this).animate({"width":"180px"});
+									$(".vc_menu-search-text").animate({"width":"155px"});
+								}
+								else {
+									$(this).animate({"width":"35px"});
+									$(".vc_menu-search-text").animate({"width":"25px"});
+								}
+							});
 						});
-					});
-				</script>
-			</div><!-- End search box -->
-			
-			<div class="contact-box">
-				<p>T 323.957.3350</p>
-				<a href="https://www.facebook.com/SeismicProductions?fref=ts"><img src="images/facebook.png" alt="facebook logo"/></a>
-				<a href="https://twitter.com/seismicpro"><img src="images/twitter.png" alt="twitter logo"/></a>
+					</script>
+
+				</div>
+
+				<div class="contact-box">
+					<p>T 323.957.3350</p>
+					<a href=""><img src="images/facebook.png" alt="facebook logo"/></a>
+					<a href=""><img src="images/twitter.png" alt="twitter logo"/></a>
+				</div>
 			</div>
 		</div>
-	</div>
-</header>  
+	</header> 
 
-<nav class="clearfix">
-	<div class="nav-wrap">
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="our-work.html">Our Work</a></li>
-			<li><a href="about-us.html">About</a></li>
-			<li><a href="contact-us.html" class="current">Contact</a></li>
-		</ul>
-	</div>
-</nav>  
-<hr class="contact-rule"/>
-<div class="contact-wrapper">
-<h2>CONTACT</h2>
-<div class="inner-contact">
-	<div class="form-container">
-		<form>
-			<input type="text" name="name" id="name" class="form-input" value="Name" onblur="if (this.value == '') {this.value = 'Name';}" onfocus="if (this.value == 'Name') {this.value = '';}">
-			<input type="text" name="email" id="email" class="form-input" value="Email" onblur="if (this.value == '') {this.value = 'Email';}" onfocus="if (this.value == 'Email') {this.value = '';}">
-			<input type="text" name="subject" id="subject" class="form-input" value="Subject" onblur="if (this.value == '') {this.value = 'Subject';}" onfocus="if (this.value == 'Subject') {this.value = '';}">
-			<textarea id=message class="form-input" name=message cols="40" rows="10" value="Message" onblur="if (this.value == '') {this.value = 'Message';}" onfocus="if (this.value == 'Message') {this.value = '';}" onkeydown="checkEditboxLimit(1,'message', 500)" onkeyup="checkEditboxLimit(1,'message',500)" onchange="checkEditboxLimit(1,'message',500)">Message</textarea>
-			<p id="word-count">You have <span>500</span> characters left.</p>
-			<input type="checkbox" class="inline-check"><p class="send-text">Send a copy of this message to yourself</p>
-			<input type="submit" value="Send">
+<!-- TOP NAV -->
+    <nav class="clearfix">
+        <div class="nav-wrap">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-work.html">Our Work</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="contact-us.html" class="current">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- TITLE -->
+    <div class="rt-container pageHead">
+      <div class="rt-grid-12">
+        <h2>Contact Us</h2>
+        <hr class="pageRule" />
+      </div>
+    </div>
+
+<!-- CONTENT -->
+
+		<form action="contact-form/process.php" enctype="multipart/form-data" method="POST" name="contact" id="contact" class="ucf">
+			<div class="message"></div>
+			<fieldset>
+				<legend>Please provide your details below</legend>
+
+				<p class="field-wrapper">
+					<label for="name" accesskey="U">
+						<span class="required">Your Name</span>
+						<input class="field" type="text" name="name" id="name" size="30" required>
+					</label>
+				</p>
+
+				<p class="field-wrapper">
+					<label for="email" accesskey="E">
+						<span class="required">Email</span>
+						<input class="field" type="email" name="email" id="email" size="30" placeholder="you@youremail.com" required>
+					</label>
+				</p>
+
+				<p class="field-wrapper">
+					<label for="phone" accesskey="P">
+						<span class="required">Phone</span>
+						<input class="field" type="tel" name="phone" id="phone" size="30" required>
+					</label>
+				</p>
+
+				<p class="field-wrapper">
+					<label for="subject" accesskey="S">
+						<span class="required">Subject</span>
+						<select class="field" type="text" name="subject" id="subject" required>
+							<option value="support">Support</option>
+							<option value="sales">Sales</option>
+							<option value="bugs">Report a bug</option>
+						</select>
+					</label>
+				</p>
+
+				<p class="field-wrapper">
+					<label for="message" accesskey="M">
+						<span class="required">Message</span>
+						<textarea class="field" name="message" id="message" cols="40" rows="3" required></textarea>
+					</label>
+				</p>
+
+				<p class="field-wrapper">
+					<label for="attachment" accesskey="F">
+						<span class="required">Upload a file</span>
+						<input class="field" type="file" name="attachment[]" id="attachment" multiple>
+					</label>
+				</p>
+
+				<!-- Google reCAPTCHA -->
+				<!-- change YOUR_SITE_KEY with your google recaptcha key -->
+				<!-- https://developers.google.com/recaptcha/docs/start -->
+				<div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+				<noscript>
+					<div style="width: 302px; height: 352px;margin-bottom:20px;margin-left:100px;">
+						<div style="width: 302px; height: 352px; position: relative;">
+							<div style="width: 302px; height: 352px; position: absolute;">
+								<!-- change YOUR_SITE_KEY with your google recaptcha key -->
+								<iframe src="https://www.google.com/recaptcha/api/fallback?k=YOUR_SITE_KEY" frameborder="0" scrolling="no" style="width: 302px; height:352px; border-style: none;">
+								</iframe>
+							</div>
+							<div style="width: 250px; height: 80px; position: absolute; border-style: none; bottom: 21px; left: 25px; margin: 0px; padding: 0px; right: 25px;">
+								<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 80px; border: 1px solid #c1c1c1; margin: 0px; padding: 0px; resize: none;" value=""></textarea>
+							</div>
+						</div>
+					</div>
+				</noscript>
+
+				<!-- honeypot -->
+				<p class="field-wrapper hey-honey">
+					<label for="honey">
+						Please leave this field empty - we're using it to stop robots submitting the form<br>
+						<input class="field" type="text" name="honey" id="honey">
+					</label>
+				</p>
+
+				<button type="submit" class="button primary">Send details</button>
+
+			</fieldset>
 		</form>
-	</div><!--  Close form -->
-	<div class="map-container">
-		<h3>SEISMIC PRODUCTIONS</h3>
-		<p>7010 Santa Monica Blvd</p>
-		<p>Los Angeles, CA 90038</p>
-		<br/>
-		<p>T 323.957.3350</p>
-		<p>F 323.957.3355</p>
-		<div id="show-map"></div>
-	</div>
-</div><!-- Close inner-contact -->
+
 </div>
 
 	
@@ -189,5 +271,19 @@
 		<p>&copy; 2015 SEISMIC PRODUCTIONS ALL RIGHTS RESERVED</p>
 	</div>
 </footer>
+
+<!-- Javascript =============================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/theme.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<!-- Specific Page Scripts Put Here -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript" src="js/jquery.gmap.min.js"></script> 
+<script type="text/javascript"  src="js/specific/map-large.js"></script> 
+<!-- Specific Page Scripts End -->
+
 </body>
 </html>
